@@ -1,0 +1,3 @@
+#	Enable Syntax
+syntax enable
+
