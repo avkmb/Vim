@@ -4,6 +4,8 @@
 "	=					=
 "	=========================================
 
+
+
 "	AUTO-SOURCE 
 if has("autocmd")
 
@@ -21,12 +23,14 @@ hi Visual cterm=bold,italic
 
 set autoread
 set gdefault
+
 "	Set search hightlight colors
 " 	Use :nohlsearch to turn off
 hi hlsearch cterm=bold,italic,reverse ctermbg=darkgray
 syntax on
-"	.swp file directory
 
+
+"	.swp file directory
 if has('unix')
 
 	set backupdir=/tmp
@@ -63,7 +67,6 @@ set foldmethod=marker
 "
 "	<space> to create open/close fold
 nnoremap <space> za
- 
 
 "	[a'c] to create comment fold"{{{
 xnoremap ã zf
