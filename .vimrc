@@ -3,7 +3,6 @@
 "	=	Dante Pasionek's .vimrc		=
 "	=					=
 "	=========================================
-"	This is a test line
 
 "	AUTO-SOURCE 
 if has("autocmd")
@@ -42,8 +41,6 @@ while c <= 'z'
 	let c = nr2char(1+char2nr(c))
 endwhile
 
-"Deprecated; Never use
-"nnoremap ;s :saveas<space>
 set ttimeoutlen=0
 
 nnoremap  <a-m> :execute getline('.')<CR>
@@ -75,15 +72,9 @@ xnoremap ã zf
 xnoremap ú <Esc>O [Fold Title]<cr> <Esc>gv<cr> zf<cr>
 
 "	[a'x]
-nnoremap ø zd "}}}
+nnoremap ø zd 
+"	}}}
 
 
-"	GVIM MODIFICATIONS
-
-"	Remove that ugly toolbar up top
-"	And everything else that's ugly
-set guioptions-=m
-set guioptions-=T
-set guioptions-=r
-set guioptions-=
-
+"	Pathogen Support
+execute pathogen#infect()
