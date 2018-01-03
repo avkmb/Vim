@@ -1,9 +1,9 @@
 "	Navigation shortcuts 
 let mapleader=";"
 
-"	Switch between tabs easier using ;n
-nnoremap <leader>, :tabn<CR>
-nnoremap <leadeR>. :tabN<CR>
+"	Switch between tabs easier using ;< ;>
+nnoremap <leader>, :tabN<CR>
+nnoremap <leadeR>. :tabn<CR>
 
 "	Switch between files easier using h|l
 nnoremap <leader>h <C-W><C-H> 

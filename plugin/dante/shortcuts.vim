@@ -4,6 +4,7 @@ noremap <leader><leader> <Esc>
 inoremap <leader><leader> <Esc>:w<CR>
 cnoremap <leader><leader> <Esc>
 
+
 "	Accessing .vimrc easily
 nmap <leader>v :tabedit $MYVIMRC<CR>
 nmap <leader>p :!xdg-open ~/.vim/plugin<CR><CR>
@@ -39,27 +40,38 @@ inoremap ó <Delete>
 set laststatus=2
 set showcmd
 
-"	echo "It's not fucking bash"
+"	echo "It's not/ fucking bash"
 "	Making paranthesis/brackets lazier
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {<cr><cr>}<up> 
 
-inoremap /* /**/<left><left><cr>*<cr><up><right>
+"	Single bracket w/o entering [a'b]
+inoremap â {}<left>
+
+inoremap <leader>8  /**/<left><left><cr>*<cr><up><right>
+
 "	KATY QUESTIONS: Easier way to do left 3 times?
-inoremap // /*  */<left><left><left>
+"
+
+"	Easier way to make pretty comments, [C'/]
+inoremap   /*  */<left><left><left>
+
+
 
 
 
 
 "	Put parentheses around a visual selection [a'p]
 "
-"	KATY QUESTION: Making this generic so that [a'_] will do same thing
+"	KATY QUESTION: making this generic so that [a'_] will do same thing
 "	with _
+"	where _ is a generic character
 xnoremap ð c()<left><esc>p
 
-"	Visually select word in normal mode [a's][a'e]
-"inoremap <a-s><a-e> viw
+"	Visually select word in normal mode [a'q]
+inoremap ñ <esc>viw
+
 
 "Open / Close Tree File Exloprer
 nnoremap <leader>t :NERDTree<CR>
