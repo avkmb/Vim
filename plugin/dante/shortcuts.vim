@@ -52,10 +52,19 @@ inoremap â {}<left>
 inoremap <leader>8  /**/<left><left><cr>*<cr><up><right>
 
 "	KATY QUESTIONS: Easier way to do left 3 times?
-"
+" *** avk: 
+"     kind of - you would use an expression map... [:help :map-<expr>]
+"            regular inoremap:               inoremap               <input keys>    <output keys / keys to press>
+"         expression inoremap:               inoremap <expr>        <input keys>    <expression that returns string of output keys>
+"     ... and then use repeat() [:help repeat()]
+"        expression inoremap with repeat:    inoremap <expr>        <input keys>    repeat('<some output keys>', 3)
+"        expression inoremap with repeat:    inoremap <expr>        <input keys>    '<an output key alone up here>' .repeat('<and then repeated output keys>', 3)
+
 
 "	Easier way to make pretty comments, [C'/]
 inoremap   /*  */<left><left><left>
+" *** avk: this^ mapping rewritten with <expr> & repeat():
+inoremap <expr>   '/*  */' .repeat('<left>',3)
 
 
 
